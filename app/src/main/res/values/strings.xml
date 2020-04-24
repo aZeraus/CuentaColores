@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">CuentaColores</string>
+    <string name="descripcion">Juego que consiste en memorizar el número de bolas de cada color que hay en la pantalla.</string>
+    <string name="Pregunta">¿Cuántas bolas de cada color había moviéndose por la pantalla?</string>
+</resources>
