@@ -93,6 +93,8 @@ public class Respuestas extends AppCompatActivity {
                             // Creamos un objeto Intent para volver a la actividad principal.
                             Intent intentVolver = new Intent(getApplicationContext(),MainActivity.class);
                             startActivity(intentVolver);
+                            // Para que cierre la pantalla y no se pueda volver a ella sin pasar por el principio.
+                            finish();
                         }
                     },7000);
                 }

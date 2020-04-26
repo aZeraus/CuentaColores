@@ -29,7 +29,6 @@ public class Juego extends AppCompatActivity {
         //musicaFondo.setLooping(true);
         // Reproducimos el audio.
         musicaFondo.start();
-
         // Establecemos un evento para que se active pasados 20 segundos.
         new Handler().postDelayed(new Runnable() {
             @Override
@@ -60,7 +59,17 @@ public class Juego extends AppCompatActivity {
                 intentAbrir.putExtra("azules", azules);
                 intentAbrir.putExtra("verdes", verdes);
                 startActivity(intentAbrir);
+                // Para que cierre la pantalla y no se pueda volver a ella sin pasar por el principio.
+                finish();
             }
         },20000);
+    }
+    // Sobreescribimos el método onBackPressed() y lo dejamos vacío para que si se se pulsa el botón volver del sistema no haga nada.
+    @Override
+    public void onBackPressed() {
+        /*if (musicaFondo.isPlaying()) {
+            musicaFondo.stop();
+            finish();
+        }*/
     }
 }
